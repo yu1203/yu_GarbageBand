@@ -1,0 +1,22 @@
+= form_for @band_member do |f|
+  - if @band_member.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@band_member.errors.count, "error")} prohibited this band_member from being saved:"
+      %ul
+        - @band_member.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name, placeholder: "AAA"
+  .field
+    = f.label :instrument
+    = f.text_field :instrument
+  .field
+    = f.label :looking_for
+    = f.text_field :looking_for
+  .field
+    = f.label :email
+    = f.text_field :email
+  .actions
+    = f.submit 'Save'

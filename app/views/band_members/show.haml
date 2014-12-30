@@ -1,0 +1,22 @@
+- @body_classes = "show"
+
+%p#notice= notice
+
+%p
+  %b Name:
+  = @band_member.name
+%p
+  %b Instrument:
+  = @band_member.instrument
+%p
+  %b Looking for:
+  = @band_member.looking_for
+%p
+  %b Email:
+  = @band_member.email
+
+= link_to 'Edit', edit_band_member_path(@band_member)
+\|
+= link_to 'Back', root_path
+\|
+= link_to 'Destroy', @band_member, :method => :delete, :data => { :confirm => 'Are you sure?' }
