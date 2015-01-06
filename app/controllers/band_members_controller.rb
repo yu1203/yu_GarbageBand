@@ -4,7 +4,7 @@ class BandMembersController < ApplicationController
   # GET /band_members
   # GET /band_members.json
   def index
-    @band_members = BandMember.all
+    @band_members = BandMember.all;
   end
 
   # GET /band_members/1

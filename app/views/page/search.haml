@@ -1,0 +1,7 @@
+%h1 search
+
+= form_tag '/search_result', method: 'get' do
+  = field_set_tag do
+    = label_tag :looking_for, 'Looking For: '
+    = text_field_tag :looking_for
+    = submit_tag 'Search'

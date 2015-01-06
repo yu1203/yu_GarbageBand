@@ -1,0 +1,18 @@
+%h1 search_result
+
+%table
+  %tr
+    %th Name
+    %th Instrument
+    %th Looking for
+    %th Email
+    %th
+    %th
+
+  - @band_members.each do |band_member|
+    %tr
+      %td= link_to band_member.name, band_member
+      %td= band_member.instrument
+      %td= band_member.looking_for
+      %td= band_member.email
+  %br

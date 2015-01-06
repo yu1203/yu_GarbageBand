@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   root "band_members#index"
   get "about_us", to: "page#about_us", as: :about_us
+  get "search_result", to: "page#search_result", as: :search_result
+  get "search", to: "page#search", as: :search
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
